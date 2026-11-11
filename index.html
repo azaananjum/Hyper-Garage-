@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08090d">
+  <title>Hyper Garage KHI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient ambient-one"></div><div class="ambient ambient-two"></div>
+  <header class="topbar">
+    <button class="brand" data-tab="home" aria-label="Go to home">
+      <span class="brand-mark"><i class="fa-solid fa-car-side"></i></span>
+      <span><strong>HYPER<span>GARAGE</span> <small>KHI</small></strong><em>Automotive Mobility Hub</em></span>
+    </button>
+    <div class="header-actions">
+      <button class="icon-button" id="cart-open" aria-label="Open cart"><i class="fa-solid fa-bag-shopping"></i><b id="cart-badge">0</b></button>
+      <a class="button button-primary call-button" href="tel:1122"><i class="fa-solid fa-phone"></i><span>Emergency</span></a>
+      <button class="mobile-menu" id="menu-toggle" aria-label="Toggle navigation"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-label">WORKSPACE</div>
+      <nav class="side-nav">
+        <button class="nav-item active" data-tab="home"><i class="fa-solid fa-house"></i> Overview</button>
+        <button class="nav-item" data-tab="services"><i class="fa-solid fa-screwdriver-wrench"></i> Services</button>
+        <button class="nav-item" data-tab="products"><i class="fa-solid fa-box-open"></i> Parts store</button>
+        <button class="nav-item" data-tab="mechanics"><i class="fa-solid fa-location-dot"></i> Garages & SOS</button>
+        <button class="nav-item" data-tab="chat"><i class="fa-solid fa-comments"></i> Mechanic chat</button>
+        <button class="nav-item" data-tab="booking"><i class="fa-solid fa-calendar-check"></i> Appointments</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="support-card"><span class="support-icon"><i class="fa-solid fa-headset"></i></span><strong>Need roadside help?</strong><p>Find a nearby garage or contact support.</p><button class="text-action" data-tab="mechanics">Get assistance <i class="fa-solid fa-arrow-right"></i></button></div>
+        <div class="system-status"><span class="status-dot"></span> SYSTEM OPERATIONAL <small>HYPER GARAGE · KHI</small></div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="page-heading"><div><p class="eyebrow">KARACHI / AUTOMOTIVE NETWORK</p><h1 id="page-title">Garage overview<span>.</span></h1><p class="page-subtitle" id="page-subtitle">Everything your vehicle needs, in one place.</p></div><div class="date-chip"><i class="fa-regular fa-clock"></i><span id="clock">Local time</span></div></div>
+
+      <section class="tab-panel active" id="tab-home">
+        <div class="hero">
+          <img src="https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&w=1500&q=85" alt="Performance car">
+          <div class="hero-shade"></div>
+          <div class="hero-content">
+            <div class="live-pill"><span></span> KARACHI 24/7 CAR RESCUE</div>
+            <p class="eyebrow">BUILT FOR THE DRIVE</p>
+            <h2>YOUR CITY.<br><span>YOUR GARAGE.</span></h2>
+            <p>Trusted automotive services, mechanic support and performance essentials for every journey.</p>
+            <div class="hero-actions"><button class="button button-primary" data-tab="booking"><i class="fa-solid fa-calendar-plus"></i> Book a service</button><button class="button button-glass" data-tab="mechanics"><i class="fa-solid fa-location-crosshairs"></i> Find a garage</button></div>
+          </div>
+          <div class="hero-index">01 <span>/ 06</span></div>
+        </div>
+
+        <div class="section-head"><div><p class="eyebrow">AT A GLANCE</p><h2>Vehicle telemetry</h2></div><span class="status-label"><i class="fa-solid fa-circle-check"></i> DEMO DATA</span></div>
+        <div class="stats-grid">
+          <article class="stat-card"><div class="stat-top"><span>Engine temperature</span><i class="fa-solid fa-temperature-half"></i></div><strong>89<small>°C</small></strong><div class="meter"><span style="width:62%"></span></div><small class="muted">Within normal range</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Battery voltage</span><i class="fa-solid fa-car-battery"></i></div><strong>14.1<small> V</small></strong><div class="meter cyan"><span style="width:84%"></span></div><small class="muted">Charging normally</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Oil condition</span><i class="fa-solid fa-droplet"></i></div><strong>95<small>%</small></strong><div class="meter green"><span style="width:95%"></span></div><small class="muted">Good condition</small></article>
+          <article class="stat-card"><div class="stat-top"><span>Network status</span><i class="fa-solid fa-signal"></i></div><strong class="online-value">Online</strong><div class="status-line"><span></span> All systems ready</div><small class="muted">Service network</small></article>
+        </div>
+
+        <div class="content-grid">
+          <article class="panel diagnostic-panel">
+            <div class="panel-heading"><div class="feature-icon"><i class="fa-solid fa-microchip"></i></div><div><p class="eyebrow">SMART DIAGNOSTICS</p><h3>OBD-II code scanner</h3></div><span class="tag">BETA</span></div>
+            <p class="muted">Enter a diagnostic trouble code to view a basic explanation and suggested next step.</p>
+            <form id="obd-form" class="inline-form"><input id="obd-input" placeholder="e.g. P0300" maxlength="8" autocomplete="off"><button class="button button-primary" type="submit">Run scan <i class="fa-solid fa-arrow-right"></i></button></form>
+            <div id="obd-result" class="result-box hidden" aria-live="polite"></div>
+            <p class="fine-print">Demo reference only. Confirm all fault codes with a qualified technician and a physical scanner.</p>
+          </article>
+          <article class="panel fuel-panel">
+            <div class="panel-heading"><div class="feature-icon amber"><i class="fa-solid fa-gas-pump"></i></div><div><p class="eyebrow">QUICK ESTIMATE</p><h3>Fuel cost calculator</h3></div></div>
+            <div class="fuel-rate"><span>Petrol reference rate</span><strong>Rs. 278.40 <small>/ litre</small></strong></div>
+            <label for="fuel-liters">How many litres?</label><input id="fuel-liters" type="number" min="0" max="10000" step="0.1" placeholder="Enter litres">
+            <div class="fuel-total"><span>Estimated total</span><strong id="fuel-total">Rs. 0</strong></div>
+            <p class="fine-print">Illustrative rate from the supplied design; verify current prices before purchase.</p>
+          </article>
+        </div>
+        <div class="section-head"><div><p class="eyebrow">EXPLORE THE NETWORK</p><h2>Everything under one roof</h2></div></div>
+        <div class="quick-grid">
+          <button class="quick-card" data-tab="services"><span><i class="fa-solid fa-gears"></i></span><strong>Car services</strong><small>Maintenance & tuning</small><i class="fa-solid fa-arrow-up-right-from-square arrow"></i></button>
+          <button class="quick-card" data-tab="products"><span class="violet"><i class="fa-solid fa-box-open"></i></span><strong>Parts & gear</strong><small>Tools & detailing</small><i class="fa-solid fa-arrow-up-right-from-square arrow"></i></button>
+          <button class="quick-card" data-tab="mechanics"><span class="green"><i class="fa-solid fa-map-location-dot"></i></span><strong>Karachi garages</strong><small>Local mechanic directory</small><i class="fa-solid fa-arrow-up-right-from-square arrow"></i></button>
+          <button class="quick-card" data-tab="chat"><span class="blue"><i class="fa-solid fa-comments"></i></span><strong>Mechanic support</strong><small>Interactive help desk</small><i class="fa-solid fa-arrow-up-right-from-square arrow"></i></button>
+        </div>
+        <div class="emergency-strip"><div class="emergency-icon"><i class="fa-solid fa-truck-fast"></i></div><div><strong>Stranded on the road?</strong><p>Browse the garage directory and call a listed mechanic.</p></div><button class="button button-primary" data-tab="mechanics">SOS assistance</button></div>
+      </section>
+
+      <section class="tab-panel" id="tab-services">
+        <div class="section-head"><div><p class="eyebrow">WORKSHOP MENU</p><h2>Automotive services</h2><p class="muted">Choose a service to start an appointment request.</p></div></div>
+        <div id="services-grid" class="services-grid"></div>
+      </section>
+
+      <section class="tab-panel" id="tab-products">
+        <div class="section-head"><div><p class="eyebrow">HYPER GARAGE SHOP</p><h2>Parts & detailing gear</h2><p class="muted">Browse the sample catalogue and add items to your cart.</p></div><button class="button button-outline" id="products-cart"><i class="fa-solid fa-bag-shopping"></i> View cart</button></div>
+        <div class="toolbar"><label class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="product-search" placeholder="Search products..."></label><span id="product-count" class="muted"></span></div>
+        <div id="products-grid" class="products-grid"></div>
+      </section>
+
+      <section class="tab-panel" id="tab-mechanics">
+        <div class="section-head"><div><p class="eyebrow">KARACHI SERVICE NETWORK</p><h2>Garages & roadside help</h2><p class="muted">Sample directory entries from the supplied prototype. Verify details before visiting.</p></div></div>
+        <div class="toolbar"><label class="search-box"><i class="fa-solid fa-magnifying-glass"></i><input id="mechanic-search" placeholder="Search garage or specialty..."></label><select id="location-filter" class="select-control"><option value="all">All Karachi zones</option><option value="DHA">DHA & Clifton</option><option value="Shahrah-e-Faisal">Shahrah-e-Faisal</option><option value="Gulshan">Gulshan-e-Iqbal</option><option value="North Nazimabad">North Nazimabad</option></select></div>
+        <div id="mechanics-grid" class="mechanics-grid"></div>
+      </section>
+
+      <section class="tab-panel" id="tab-chat">
+        <div class="section-head"><div><p class="eyebrow">SUPPORT DESK</p><h2>Mechanic chat</h2><p class="muted">A local demo assistant with preset responses — not a live mechanic connection.</p></div></div>
+        <div class="chat-layout panel">
+          <aside class="chat-contacts"><p class="eyebrow">SELECT A GARAGE</p><div id="chat-contacts"></div></aside>
+          <div class="chat-main"><div class="chat-head"><div class="avatar" id="chat-avatar">HG</div><div><strong id="chat-name">Hyper Garage DHA Hub</strong><small id="chat-specialty">EFI & Engine Tuning</small></div><span class="status-label"><i class="fa-solid fa-circle"></i> DEMO</span></div><div id="chat-messages" class="chat-messages" aria-live="polite"></div><form id="chat-form" class="chat-compose"><input id="chat-input" placeholder="Ask about service, price or location..." autocomplete="off"><button class="button button-primary" aria-label="Send message"><i class="fa-solid fa-paper-plane"></i></button></form></div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="tab-booking">
+        <div class="section-head"><div><p class="eyebrow">PLAN YOUR VISIT</p><h2>Book a service</h2><p class="muted">Submit an appointment request saved locally on this device.</p></div></div>
+        <div class="booking-layout"><form id="booking-form" class="panel booking-form"><div class="form-heading"><div class="feature-icon"><i class="fa-solid fa-calendar-check"></i></div><div><h3>Appointment details</h3><p class="muted">Fields marked * are required.</p></div></div>
+          <div class="form-grid"><label>Full name *<input id="book-name" required placeholder="Your name"></label><label>Phone number *<input id="book-phone" type="tel" required placeholder="03xx-xxxxxxx"></label><label class="span-two">Service required<select id="book-service-type"><option>Periodic Engine Maintenance</option><option>OBD Digital Computer Tuning</option><option>AC Climate Servicing</option><option>Mobile Puncture Rescue</option><option>Brake Pad Replacement</option></select></label><label>Car make / model *<input id="book-car" required placeholder="Honda Civic"></label><label>Preferred date<input id="book-date" type="date"></label><label class="span-two">Additional notes<textarea id="book-notes" rows="3" placeholder="Describe the issue (optional)"></textarea></label></div>
+          <button class="button button-primary submit-button" type="submit">Send appointment request <i class="fa-solid fa-arrow-right"></i></button><p class="fine-print">This prototype does not transmit bookings to a real workshop.</p>
+        </form><aside class="panel booking-aside"><p class="eyebrow">YOUR REQUESTS</p><h3>Saved appointments</h3><div id="booking-list" class="booking-list"></div></aside></div>
+      </section>
+
+      <footer class="footer"><span>© <span id="year"></span> Hyper Garage KHI</span><span>DRIVE SMART. STAY READY.</span></footer>
+    </main>
+  </div>
+
+  <div class="cart-backdrop hidden" id="cart-backdrop"></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-label="Shopping cart" aria-hidden="true"><div class="drawer-head"><div><p class="eyebrow">YOUR SELECTION</p><h3>Shopping cart</h3></div><button class="icon-button" id="cart-close" aria-label="Close cart"><i class="fa-solid fa-xmark"></i></button></div><div id="cart-items" class="cart-items"></div><div class="drawer-foot"><div class="cart-sum"><span>Subtotal</span><strong id="cart-total">Rs. 0</strong></div><button id="checkout-button" class="button button-primary full-width">Place demo order <i class="fa-solid fa-arrow-right"></i></button><p class="fine-print">Demo checkout only. No payment is collected.</p></div></aside>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
